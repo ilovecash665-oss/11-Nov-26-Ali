@@ -1,0 +1,387 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gaming World</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#0b0b0b;
+color:#fff;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.85);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#00ffcc;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:30px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#00ffcc;
+}
+
+.hero{
+height:100vh;
+background:url("https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=80") center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero .content{
+background:rgba(0,0,0,.6);
+padding:40px;
+border-radius:20px;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:30px;
+background:#00ffcc;
+font-size:18px;
+cursor:pointer;
+transition:.4s;
+}
+
+button:hover{
+background:#00b894;
+transform:scale(1.1);
+}
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#00ffcc;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#1b1b1b;
+border-radius:15px;
+overflow:hidden;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00ffcc;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card h3{
+padding:15px;
+}
+
+.card p{
+padding:0 15px 20px;
+color:#bbb;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.contact{
+max-width:700px;
+margin:auto;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border:none;
+border-radius:10px;
+background:#222;
+color:#fff;
+}
+
+footer{
+background:#111;
+text-align:center;
+padding:30px;
+margin-top:40px;
+}
+
+.topBtn{
+position:fixed;
+right:20px;
+bottom:20px;
+width:50px;
+height:50px;
+border-radius:50%;
+font-size:20px;
+display:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🎮 Gaming World</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#games">Games</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="content">
+
+<h1>WELCOME GAMER</h1>
+
+<p>Experience the Ultimate Gaming Universe</p>
+
+<button onclick="scrollToGames()">Explore Games</button>
+
+</div>
+
+</section>
+
+<section id="games">
+
+<h2 class="title">Popular Games</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80">
+
+<h3>Call Of Duty</h3>
+
+<p>Battle with players around the world.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=80">
+
+<h3>Cyber Game</h3>
+
+<p>Enjoy futuristic action adventures.</p>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80">
+
+<h3>Racing X</h3>
+
+<p>High speed realistic racing experience.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1511882150382-421056c89033?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="contact">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="6" placeholder="Your Message"></textarea>
+
+<button onclick="sendMessage()">Send Message</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Gaming World © 2026</h3>
+
+<p>Designed with HTML CSS JavaScript</p>
+
+</footer>
+
+<button class="topBtn" id="topBtn">↑</button>
+
+<script>
+
+function scrollToGames(){
+
+document.getElementById("games").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+function sendMessage(){
+
+alert("Thank You! Your message has been sent.");
+
+}
+
+let btn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+if(document.documentElement.scrollTop>300){
+
+btn.style.display="block";
+
+}else{
+
+btn.style.display="none";
+
+}
+
+}
+
+btn.onclick=function(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="scale(1.05)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="scale(1)";
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
+```
